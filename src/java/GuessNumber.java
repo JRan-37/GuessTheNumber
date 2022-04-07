@@ -85,7 +85,15 @@ public class GuessNumber {
     }
     //Returns user input
     private String getInput(){
-        return inputReader.nextLine();
+        String userInput;
+        try{
+            userInput = inputReader.nextLine();
+        }
+        catch(Exception e){
+            userInput = "invalid";
+        }
+
+        return userInput;
     }
 
 }
